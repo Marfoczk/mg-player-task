@@ -21,24 +21,24 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
     const nextSong = data.tracks[i+1].name;
     const nextSongTime = data.tracks[i+1].duration;
     const source = data.tracks[i].src;
-    const [playing, setPlaying] = useState(true);
+    const [playing, setPlaying] = useState(false);
 
     function next() {
         if (init >= 2) return 
+        setPlaying(false);
         setInit(prevInit => prevInit + 1)
         sliderRef.current.slickNext();
-        setPlaying(false);
     };
     function previous() {
         if (init < 1) return
+        setPlaying(false);
         setInit(prevInit => prevInit - 1)
         sliderRef.current.slickPrev();
-        setPlaying(false);
     };
 
     useEffect(()=>{
         setCurrentSong(data.tracks[i].name);
-        // setPlaying(true);
+        setPlaying(true);
     },[init,i])
 
       function handlePlay() {
@@ -48,8 +48,8 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
       }
 
       function handleEnd() {
-        setPlaying(false);
-        setI(prevI => prevI + 1);
+          setI(prevI => prevI + 1);
+          setPlaying(false);
       }
       function handleLoad() {
           setPlaying(true);
