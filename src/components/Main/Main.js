@@ -26,12 +26,14 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
     function next() {
         if (init >= 2) return 
         setPlaying(false);
+        setI(0);
         setInit(prevInit => prevInit + 1)
         sliderRef.current.slickNext();
     };
     function previous() {
         if (init < 1) return
         setPlaying(false);
+        setI(0);
         setInit(prevInit => prevInit - 1)
         sliderRef.current.slickPrev();
     };
@@ -56,7 +58,18 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
       }
     
     return (
+
         <Wrapper>
+
+            {data.tracks[i].src &&         
+            <ReactHowler
+                playing={playing}
+                src={source}
+                html5={true}
+                onEnd={handleEnd}
+                onLoad={handleLoad}
+            />
+            }
 
             <Nav
              showMore={showMore} 
@@ -88,15 +101,6 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
                 <SvgDiv><NextIco onClick={next}/></SvgDiv>
                 <SvgDiv><RepeatIco/></SvgDiv>
             </ControlsDiv>
-
-            {data.tracks[i].src &&         
-            <ReactHowler
-                playing={playing}
-                src={source}
-                onEnd={handleEnd}
-                onLoad={handleLoad}
-            />
-            }
 
             <ProgressBar/>
             <AudioWave
