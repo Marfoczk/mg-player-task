@@ -22,6 +22,7 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
     const nextSongTime = data.tracks[i+1].duration;
     const source = data.tracks[i].src;
     const [playing, setPlaying] = useState(false);
+    const howlerRef = useRef(null);
 
     function next() {
         if (init >= 2) return 
@@ -69,15 +70,18 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
                 html5={true}
                 onEnd={handleEnd}
                 onLoad={handleLoad}
+                ref={howlerRef}
             />
             }
-
+            <button onClick={()=> console.log(howlerRef.current.howler._duration)}>consol</button>
+            
             <Nav
              showMore={showMore} 
              setShowMore={setShowMore} 
              showPlaylist={showPlaylist} 
              setShowPlaylist={setShowPlaylist} 
-             data={data}/>
+             data={data}
+             />
 
             <SliderWrapper>
                 <Slick 

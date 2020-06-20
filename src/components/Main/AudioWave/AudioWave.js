@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import styled, { keyframes } from 'styled-components'
-// import styles from './AudioWave.module.scss'
 
 const anIm = keyframes`
   0%   { transform: scaleY(1.4);}

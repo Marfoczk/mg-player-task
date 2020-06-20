@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 `;
 export const SliderWrapper = styled.div`
     margin-top: -2rem;
+    margin-bottom: auto;
     max-height: 45%;
     grid-area: b;
 `;
@@ -22,6 +23,7 @@ export const StyledTitle = styled.p`
 `;
 export const ControlsDiv = styled.div`
     margin-top: auto;
+    margin-bottom: auto;
     padding: 2rem;
     display: flex;
     flex-direction: row;

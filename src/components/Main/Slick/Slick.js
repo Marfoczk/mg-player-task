@@ -22,6 +22,8 @@ export default function Slick({forwardedRef}) {
         arrows: false,
         adaptiveHeight: true,
         draggable: false,
+        swipe: false,
+        swipeToSlide: false,
       };
 
     return (

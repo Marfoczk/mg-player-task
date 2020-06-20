@@ -17,7 +17,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <button onClick={() => setShowMore(!showMore)}/> */}
 
       <Main 
         data={data[init]} 

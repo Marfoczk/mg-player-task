@@ -3,7 +3,16 @@ slick-slide {
     &:focus, a {
         outline: none;
       }
-  }
+}
+
+// .slick-slide {
+//   height:200px;
+// }
+
+// .slick-slide img {
+//   height:200px;
+// }
+
 .slick-slide.slick-current {
   border: none;
   outline: none;
@@ -12,13 +21,20 @@ slick-slide {
 }
 
 .slider-div{
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
   height: 50%;
   outline: none;
   transform: scale(.4);
   transition: all .4s ease;
 
   img{
+    justify-self: center;
+    align-self: center;
     width: 100%;
+    max-width: 60vw;
+    left: 0; right: 0;
     height: auto;
   }
 }
