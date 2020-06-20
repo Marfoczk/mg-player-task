@@ -1,5 +1,7 @@
 {
   "name": "mg-player-task",
+  "author": "Marcin Głażewski (marcin.glazewski@gmail.com)",
+  "homepage": "https://Marfoczk.github.io/mg-player-task",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
