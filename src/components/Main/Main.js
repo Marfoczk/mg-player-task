@@ -73,7 +73,7 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
                 ref={howlerRef}
             />
             }
-            <button onClick={()=> console.log(howlerRef.current.howler._duration)}>consol</button>
+            {/* <button onClick={()=> console.log(howlerRef.current.howler._duration)}>consol</button> */}
             
             <Nav
              showMore={showMore} 
