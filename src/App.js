@@ -1,24 +1,67 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Main from './components/Main/Main'
+import More from './components/More/More'
+import Playlist from './components/Playlist/Playlist'
+import './App.scss';
+import GlobalStyle from './GlobalStyle'
+import {CSSTransition} from 'react-transition-group'
+import {datta} from './data'
 
 function App() {
+  const [showMore, setShowMore] = useState(false);
+  const [showPlaylist, setShowPlaylist] = useState(false);
+  const [data, setData] = useState(datta);
+  const [init, setInit] = useState(1);
+  const [currentSong, setCurrentSong] = useState(data[init].tracks[0].name);
+  const [i, setI] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <button onClick={() => setShowMore(!showMore)}/> */}
+
+      <Main 
+        data={data[init]} 
+        setData={setData}
+        currentSong={currentSong} 
+        setCurrentSong={setCurrentSong}
+        setShowMore={setShowMore} 
+        showMore={showMore} 
+        showPlaylist={showPlaylist} 
+        setShowPlaylist={setShowPlaylist}
+        i={i}
+        setI={setI}
+        init={init}
+        setInit={setInit}
+      />
+      <CSSTransition
+        in={showMore}
+        timeout={300}
+        classNames="more"
+        unmountOnExit
+        onEnter={() => setShowMore(true)}
+        onExited={() => setShowMore(false)}
+      >
+        <More/>
+      </CSSTransition>
+
+      <CSSTransition
+        in={showPlaylist}
+        timeout={300}
+        classNames="playlist"
+        unmountOnExit
+        onEnter={() => setShowPlaylist(true)}
+        onExited={() => setShowPlaylist(false)}
+      >
+        <Playlist 
+          data={data[init]} 
+          showPlaylist={showPlaylist} 
+          setShowPlaylist={setShowPlaylist}
+          setCurrentSong={setCurrentSong}
+          setI={setI}
+        />
+      </CSSTransition>
+      
+      <GlobalStyle/>
     </div>
   );
 }

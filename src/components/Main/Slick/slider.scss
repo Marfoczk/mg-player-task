@@ -1,0 +1,24 @@
+slick-slide {
+    background-color: none;
+    &:focus, a {
+        outline: none;
+      }
+  }
+.slick-slide.slick-current {
+  border: none;
+  outline: none;
+  transform: scale(1.8);
+  transition: all .4s ease;
+}
+
+.slider-div{
+  height: 50%;
+  outline: none;
+  transform: scale(.4);
+  transition: all .4s ease;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+}

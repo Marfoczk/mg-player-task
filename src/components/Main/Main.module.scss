@@ -1,0 +1,31 @@
+.inactive{
+    cursor: pointer;
+    display: inline-flex;
+    background-image: url('../../images/Play_inactive.png');
+    width: 16rem;
+    height: 17rem;
+    // max-width: 45%;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inactive::after{
+    position: absolute;
+    pointer-events: none;
+    width: 150%;
+    height: 150%;
+    // max-width: 100%;
+    background-position: center;
+    background-image: url('../../images/Play_active.png');
+    transform: translate(-50%,-50%);
+    content:'';
+    top: 49%;
+    left: 53%;
+    display: none;
+}
+
+.inactive.show::after{
+    display: block;
+}

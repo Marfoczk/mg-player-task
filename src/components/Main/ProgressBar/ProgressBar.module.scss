@@ -1,0 +1,35 @@
+$background-color:#3d5980;
+$bar-empty:#00c9b867;
+$bar-color:#00C9B7;
+
+.progressBar {
+  height:2px;
+  width:70%;
+  position:relative;
+  // z-index:10;
+  background-color:$bar-empty;
+  margin: 2rem auto;
+  
+  &::after{
+    content: '';
+    top: 0;
+    right:0;
+    position: absolute;
+    transform: translateY(-25%);
+    width: 5px;
+    height: 5px;
+    border-radius:50%;
+    background-color:$bar-color;
+  }
+  
+  .progress {
+    position:relative;
+    top:0;
+    height:200%;
+    width: 70%;
+    transform: translateY(-25%);
+    background-color:$bar-color;
+    transition:width 0.5s ease-out;
+    border-radius: 0px 2px 2px 0px;
+  }
+}

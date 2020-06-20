@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: local('Gilroy-Light'), url(../src/fonts/Gilroy-Light.otf) format('truetype');
+}
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: local('Gilroy-ExtraBold'), url(../src/fonts/Gilroy-ExtraBold.otf) format('truetype');
+}
+
+.App {
+  overflow: hidden;
+  position: relative;
+  font-family: 'Gilroy-Light';
+  text-align: center;
+  // width: 100vw;
+  // height: 100vh;
+  
+  width: 57.6rem;
+  height: 102.4rem;
+  background-image: 
+  linear-gradient(to bottom, rgba(31, 25, 55, 0.8) 0%, rgb(31, 25, 55) 30%, rgb(31, 25, 55) 100%),
+  url(./images/bg_image.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
+
+.more-enter {
+  opacity: 0;
+  transform: scale(1.2);
+}
+.more-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 400ms;
+}
+.more-exit {
+  opacity: 1;
+}
+.more-exit-active {
+  opacity: 0;
+  transform: scale(1.2);
+  transition: opacity 400ms, transform 500ms;
+}
+
+
+
+.playlist-enter {
+  opacity: 0;
+  transform: translateY(100%);
+  // transform: scale(1.2);
+}
+.playlist-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 400ms;
+}
+.playlist-exit {
+  opacity: 1;
+}
+.playlist-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  // transform: scale(1.2);
+  transition: opacity 400ms, transform 500ms;
+}
