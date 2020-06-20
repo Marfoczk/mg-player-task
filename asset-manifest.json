@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/mg-player-task/static/css/main.06dfb400.chunk.css",
+    "main.js": "/mg-player-task/static/js/main.a0200fdd.chunk.js",
+    "main.js.map": "/mg-player-task/static/js/main.a0200fdd.chunk.js.map",
+    "runtime-main.js": "/mg-player-task/static/js/runtime-main.e1168fc9.js",
+    "runtime-main.js.map": "/mg-player-task/static/js/runtime-main.e1168fc9.js.map",
+    "static/css/2.dbf353de.chunk.css": "/mg-player-task/static/css/2.dbf353de.chunk.css",
+    "static/js/2.b0647f05.chunk.js": "/mg-player-task/static/js/2.b0647f05.chunk.js",
+    "static/js/2.b0647f05.chunk.js.map": "/mg-player-task/static/js/2.b0647f05.chunk.js.map",
+    "index.html": "/mg-player-task/index.html",
+    "precache-manifest.64c35cc95303740f5c3db09248b30543.js": "/mg-player-task/precache-manifest.64c35cc95303740f5c3db09248b30543.js",
+    "service-worker.js": "/mg-player-task/service-worker.js",
+    "static/css/2.dbf353de.chunk.css.map": "/mg-player-task/static/css/2.dbf353de.chunk.css.map",
+    "static/css/main.06dfb400.chunk.css.map": "/mg-player-task/static/css/main.06dfb400.chunk.css.map",
+    "static/js/2.b0647f05.chunk.js.LICENSE.txt": "/mg-player-task/static/js/2.b0647f05.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/mg-player-task/static/media/bg_image.52d51b7d.jpg",
+    "static/media/Main.module.scss": "/mg-player-task/static/media/Play_active.d522478d.png",
+    "static/media/back_ico.6d8b1009.svg": "/mg-player-task/static/media/back_ico.6d8b1009.svg",
+    "static/media/cover-1.png": "/mg-player-task/static/media/cover-1.8e344a79.png",
+    "static/media/cover.png": "/mg-player-task/static/media/cover.aa246fdc.png",
+    "static/media/hide_ico.svg": "/mg-player-task/static/media/hide_ico.efd35a48.svg",
+    "static/media/more_ico.68d542b2.svg": "/mg-player-task/static/media/more_ico.68d542b2.svg",
+    "static/media/next_ico.908e77ad.svg": "/mg-player-task/static/media/next_ico.908e77ad.svg",
+    "static/media/playlist_ico.svg": "/mg-player-task/static/media/playlist_ico.d560ea63.svg",
+    "static/media/previous_ico.61530e1d.svg": "/mg-player-task/static/media/previous_ico.61530e1d.svg",
+    "static/media/repeat_ico.f24e6532.svg": "/mg-player-task/static/media/repeat_ico.f24e6532.svg",
+    "static/media/shuffle_ico.9cca0f11.svg": "/mg-player-task/static/media/shuffle_ico.9cca0f11.svg",
+    "static/media/slick-theme.css": "/mg-player-task/static/media/slick.f97e3bbf.svg",
+    "static/media/unreleased_cover.png": "/mg-player-task/static/media/unreleased_cover.a2195768.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1168fc9.js",
+    "static/css/2.dbf353de.chunk.css",
+    "static/js/2.b0647f05.chunk.js",
+    "static/css/main.06dfb400.chunk.css",
+    "static/js/main.a0200fdd.chunk.js"
+  ]
+}
