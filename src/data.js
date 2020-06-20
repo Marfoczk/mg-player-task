@@ -19,6 +19,10 @@ export const datta = [
             {
                 name: 'Three',
                 duration: '0:03'
+            },
+            {
+                name: '',
+                duration: ''
             }
         ]
     },    
@@ -85,7 +89,12 @@ export const datta = [
             {
                 name:"Who Will Survive in America",
                 duration: '01:38'
-            }]
+            },
+            {
+                name: '',
+                duration: ''
+            }
+        ]
     },
     {
         artist: 'Kanye West',
@@ -103,6 +112,10 @@ export const datta = [
             {
                 name: 'Self Conscious',
                 duration: '3:35'
+            },
+            {
+                name: '',
+                duration: ''
             }
         ]
     }

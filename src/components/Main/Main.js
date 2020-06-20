@@ -18,7 +18,7 @@ import ReactHowler from 'react-howler'
 const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setShowMore, showMore, showPlaylist, setShowPlaylist, i, setI }) => {
 
     const sliderRef = useRef(null);
-    const nextSong = data.tracks[i+1].name;
+    let nextSong = data.tracks[i+1].name ? data.tracks[i+1].name : currentSong;
     const nextSongTime = data.tracks[i+1].duration;
     const source = data.tracks[i].src;
     const [playing, setPlaying] = useState(false);
@@ -65,6 +65,7 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
             <ReactHowler
                 playing={playing}
                 src={source}
+                // preload={false}
                 html5={true}
                 onEnd={handleEnd}
                 onLoad={handleLoad}

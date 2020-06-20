@@ -12,7 +12,7 @@ const Track = ({ showPlaylist, setShowPlaylist, index, title, duration, setCurre
 
     return (
         <StyledLi>
-            <Number>{index+1}.</Number>
+            {title && <Number>{index+1}.</Number>}
             <Title onClick={changeTrack}>{title}</Title>
             <Dots></Dots>
             <Duration>{duration}</Duration>

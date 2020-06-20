@@ -8,7 +8,7 @@ export default function NextSong({showPlaylist, setShowPlaylist, nextSong, nextS
             <img alt='' style={{cursor: 'pointer'}} onClick={() => setShowPlaylist(!showPlaylist)} src={playlistico}/>
             <div>
                 <StyledText up>Next</StyledText>
-                <StyledText>{nextSong}</StyledText>
+                {nextSong && <StyledText>{nextSong}</StyledText>}
             </div>
             <StyledTime>{nextSongTime}</StyledTime>
         </Wrapper>
