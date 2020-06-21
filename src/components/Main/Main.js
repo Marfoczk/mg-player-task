@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import styles from './Main.module.scss'
 
 import {ReactComponent as ShuffleIco} from '../../images/shuffle_ico.svg'
