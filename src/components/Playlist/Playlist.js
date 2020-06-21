@@ -5,6 +5,8 @@ import { Wrapper, Scroll, IMG } from './Playlist.styles'
 
 export default function Playlist({ data, ...rest }) {
 
+    console.log(data.tracks);
+
     const [show, setShow] = useState(false);
     return (
         <Wrapper>
@@ -20,7 +22,7 @@ export default function Playlist({ data, ...rest }) {
                     />
             ))}
             </Scroll>
-            <IMG show={show} src={hideIco} onClick={()=> setShow(!show)}/>
+            {data.tracks.length > 5 ? <IMG show={show} src={hideIco} onClick={()=> setShow(!show)}/> : null }
         </Wrapper>
     )
 }
