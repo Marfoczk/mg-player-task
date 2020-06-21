@@ -12,6 +12,7 @@ const StyledBoard = styled.div`
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-around;
+    height: 5vh;
     width: 100%;
     opacity: ${props => props.playing && props.data ? '100%' : '0%'};
     transition: opacity .2s ease;
@@ -44,7 +45,7 @@ export default function AudioWave( { playing, data, i } ) {
         boardDiv.style.backgroundColor = "#755DD5";
         boardDiv.classList.add('siema');
         // boardDiv.style.animationDuration = 2 + Math.floor((5 - 2) * Math.random())+'s';
-        boardDiv.style.height = 20 + Math.floor((60 - 20) * Math.random())+'px';
+        boardDiv.style.height = 50 + Math.floor((100 - 50) * Math.random())+'%';
         return boardDiv;
         }
     

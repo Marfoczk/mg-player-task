@@ -22,8 +22,15 @@ export const Scroll = styled.div`
     width: 100%;
     height: ${props => props.show ? '100%' : '80%'};
     overflow: hidden;
+    overflow: ${props => props.show ? "scroll" : "hidden"};
+    /* overflow: ${props => props.show ? 'scroll' : 'hidden'}; */
     /* background-color: ${props => props.show ? 'red' : 'green'}; */
     transition: all 0.3s linear;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
     
     &::after{
         content:'';
