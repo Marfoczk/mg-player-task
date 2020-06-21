@@ -3,7 +3,7 @@ Created by Marcin Głażewski (marcin.glazewski@gmail.com)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
+Live [DEMO](https://marfoczk.github.io/mg-player-task/)
 
 ## Available Scripts
 

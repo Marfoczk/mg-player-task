@@ -41,7 +41,7 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
 
     useEffect(()=>{
         setCurrentSong(data.tracks[i].name);
-        setPlaying(true);
+        // setPlaying(true);
     },[init,i])
 
       function handlePlay() {
@@ -52,10 +52,10 @@ const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setSh
 
       function handleEnd() {
           setI(prevI => prevI + 1);
-          setPlaying(false);
+        //   setPlaying(false);
       }
       function handleLoad() {
-          setPlaying(true);
+        //   setPlaying(true);
       }
     
     return (
