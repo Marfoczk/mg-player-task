@@ -15,13 +15,13 @@ import NextSong from './NextSong/NextSong'
 import ReactHowler from 'react-howler'
 
 
-const Main = ({ init, setInit, data, setData, currentSong, setCurrentSong, setShowMore, showMore, showPlaylist, setShowPlaylist, i, setI }) => {
+const Main = ({ playing, setPlaying, init, setInit, data, setData, currentSong, setCurrentSong, setShowMore, showMore, showPlaylist, setShowPlaylist, i, setI }) => {
 
     const sliderRef = useRef(null);
     let nextSong = data.tracks[i+1].name ? data.tracks[i+1].name : currentSong;
     const nextSongTime = data.tracks[i+1].duration;
     const source = data.tracks[i].src;
-    const [playing, setPlaying] = useState(false);
+    // const [playing, setPlaying] = useState(false);
     const howlerRef = useRef(null);
 
     function next() {

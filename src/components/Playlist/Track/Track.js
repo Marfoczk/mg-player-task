@@ -1,12 +1,13 @@
 import React from 'react'
 import { StyledLi, Number, Title, Dots, Duration } from './Tack.styles'
 
-const Track = ({ showPlaylist, setShowPlaylist, index, title, duration, setCurrentSong, setI }) => {
+const Track = ({ showPlaylist, setShowPlaylist, index, title, duration, setCurrentSong, setI, setPlaying }) => {
 
     function changeTrack(e) {
         setCurrentSong(e.target.innerText);
         setShowPlaylist(!showPlaylist);
         setI(index);
+        setPlaying(true);
     }
 
 

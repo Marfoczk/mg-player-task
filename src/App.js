@@ -14,6 +14,7 @@ function App() {
   const [init, setInit] = useState(1);
   const [currentSong, setCurrentSong] = useState(data[init].tracks[0].name);
   const [i, setI] = useState(0);
+  const [playing, setPlaying] = useState(false);
 
   return (
     <div className="App">
@@ -31,6 +32,8 @@ function App() {
         setI={setI}
         init={init}
         setInit={setInit}
+        playing={playing}
+        setPlaying={setPlaying}
       />
       <CSSTransition
         in={showMore}
@@ -57,6 +60,7 @@ function App() {
           setShowPlaylist={setShowPlaylist}
           setCurrentSong={setCurrentSong}
           setI={setI}
+          setPlaying={setPlaying}
         />
       </CSSTransition>
       
